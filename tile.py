@@ -1,15 +1,15 @@
 from PIL import Image
 import random
 
-width = 1200
-height = 400
-seed = 75
+width = 1200 # final image width
+height = 400 # final image height
+seed = 75 # -1 for no seed
 images = [
     {
         "path" : "bidoof.png",
         "amount" : 300, 
         "scale" : .35
-    } ,
+    },
     {
         "path" : "shiny.png", 
         "amount" : 1, 
@@ -46,4 +46,7 @@ def tile(images, width, height, seed=random.random()):
     base.save("output.png")
 
 if __name__ == "__main__":
+    if seed == -1:
+        seed = random.randint(0,10000)
+        print(seed)
     tile(images, width, height, seed)
