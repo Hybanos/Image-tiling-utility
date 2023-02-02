@@ -9,12 +9,12 @@ images = [
         "path" : "bidoof.png",
         "amount" : 300, 
         "scale" : .35
-    } #,
-    # {
-    #     "path" : "shiny.png", 
-    #     "amount" : 1, 
-    #     "scale" : .6
-    # },
+    } ,
+    {
+        "path" : "shiny.png", 
+        "amount" : 1, 
+        "scale" : .6
+    },
 ]
 
 def tile(images, width, height, seed=random.random()):
